@@ -23,7 +23,11 @@ For each widget, you can choose criteria to either SHOW or HIDE the widget, base
 
 == Frequently Asked Questions ==
 
-= How Can I Use it with Custom Post Types or Taxonomies? =
+= Can I Use it with Custom Post Types or Taxonomies? =
+
+Yes and No.
+
+Conditional Widgets can be configured with additional Type/Taxonomy pairs (both native and custom), similar to how it functions with Posts and Categories. However, it does not support additional Custom Post Types the way it does Pages. (If I were going to write it from scratch, I would have definitely included that, but have no plans to add it given that Widgets themselves are on the way to becoming unsupported.)
 
 The following filter is available to take pairs of Post Type and Taxononmy slugs (use in functions.php or a small plugin):
 
@@ -43,6 +47,8 @@ function success_story_conditional_widget_type_tax_pairs( $pairs_array ) {
 
 }
 </pre>
+
+If you really want to be able to use Conditional Widgets to control Widget display on individual instances of a Custom Post Type (rather than based on a Taxonomy), the workaround would be to create unique Taxonomy terms for those Custom Posts.
 
 
 == Installation ==
